@@ -23,10 +23,10 @@ struct BankManager {
     }
     
     mutating func process() {
-        numberOfCustomersVisitingTheBank += 1
-        print("\(numberOfCustomersVisitingTheBank)번 고객 업무 시작")
-        banker?[0].doBusiness()
-        print("\(numberOfCustomersVisitingTheBank)번 고객 업무 종료")
+        while let tag = customer.dequeue() {
+            banker?[0].doBusiness(tag)
+        }
+        close()
     }
     
     private mutating func close() {
