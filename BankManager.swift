@@ -16,8 +16,8 @@ struct BankManager {
         print("은행 개점했습니다.")
     }
     
-    mutating func greetingCustomer(number: [Int]) {
-        for customerTag in number {
+    mutating func greetingCustomer(number: Int) {
+        for customerTag in 0..<number {
             customer.enqueue(element: customerTag)
         }
     }
