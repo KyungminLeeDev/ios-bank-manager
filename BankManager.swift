@@ -17,6 +17,7 @@ struct BankManager {
     }
     
     mutating func greetingCustomer(number: Int) {
+        numberOfCustomersVisitingTheBank = number
         for customerTag in 0..<number {
             customer.enqueue(element: customerTag)
         }
