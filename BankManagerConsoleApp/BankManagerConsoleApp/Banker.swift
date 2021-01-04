@@ -11,8 +11,9 @@ struct Banker {
     private var takesTimeOfBusiness = 0.7
     
     func doBusiness(_ tag: Int) {
-        print("\(tag)번 고객 업무 시작")
+        let tagNumber = tag + 1
+        print("\(tagNumber)번 고객 업무 시작")
         Thread.sleep(forTimeInterval: takesTimeOfBusiness)
-        print("\(tag)번 고객 업무 종료")
+        print("\(tagNumber)번 고객 업무 종료")
     }
 }
