@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41CD6A5025A36AB6001D5DC2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CD6A4F25A36AB6001D5DC2 /* Queue.swift */; };
+		41CD6A5725A36F5F001D5DC2 /* Banker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CD6A5625A36F5F001D5DC2 /* Banker.swift */; };
 		C7694E7A259C3EC00053667F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7694E79259C3EC00053667F /* main.swift */; };
 		C7D65D1B259C8190005510E0 /* BankManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D65D1A259C8190005510E0 /* BankManager.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		41CD6A4F25A36AB6001D5DC2 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		41CD6A5625A36F5F001D5DC2 /* Banker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banker.swift; sourceTree = "<group>"; };
 		C7694E76259C3EC00053667F /* BankManagerConsoleApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BankManagerConsoleApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7694E79259C3EC00053667F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C7D65D1A259C8190005510E0 /* BankManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BankManager.swift; path = ../../BankManager.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				C7D65D1A259C8190005510E0 /* BankManager.swift */,
+				41CD6A5625A36F5F001D5DC2 /* Banker.swift */,
 				C7694E79259C3EC00053667F /* main.swift */,
 				41CD6A4F25A36AB6001D5DC2 /* Queue.swift */,
 			);
@@ -127,6 +130,7 @@
 			files = (
 				C7694E7A259C3EC00053667F /* main.swift in Sources */,
 				41CD6A5025A36AB6001D5DC2 /* Queue.swift in Sources */,
+				41CD6A5725A36F5F001D5DC2 /* Banker.swift in Sources */,
 				C7D65D1B259C8190005510E0 /* BankManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
