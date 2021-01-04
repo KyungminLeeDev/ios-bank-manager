@@ -9,7 +9,7 @@ import Foundation
 struct BankManager {
     private var banker: [Banker]?
     private var numberOfCustomersVisitingTheBank = 0
-    private var customer: Queue<Int>
+    private var customer = Queue<Int>()
     
     mutating func open(banker: Int) {
         self.banker = [Banker](repeating: Banker(), count: banker)
