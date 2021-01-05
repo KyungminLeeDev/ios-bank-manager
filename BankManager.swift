@@ -34,6 +34,7 @@ struct BankManager {
         banker = nil
         let takesTimeOfBusiness = 0.7
         let totalTakesTimeOfBusiness = Double(numberOfCustomersVisitingTheBank) * takesTimeOfBusiness
-        print("업무가 마감되었습니다. 오늘 업무를 처리한 고객은 총 \(numberOfCustomersVisitingTheBank)명이며, 총 업무시간은 \(totalTakesTimeOfBusiness)초입니다.")
+        let businessTimeToString = String(format: "%.2f", totalTakesTimeOfBusiness)
+        print("업무가 마감되었습니다. 오늘 업무를 처리한 고객은 총 \(numberOfCustomersVisitingTheBank)명이며, 총 업무시간은 \(businessTimeToString)초입니다.")
     }
 }
