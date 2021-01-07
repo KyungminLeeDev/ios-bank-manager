@@ -101,8 +101,8 @@ struct BankManager {
             if let client = waitingClients.dequeue() {
                 waitBankClerk.startWork(for: client)
                 
-                let workTime = Int(waitBankClerk.workTime * 1000)
-                DispatchQueue.global().asyncAfter(deadline: .now() + .milliseconds(workTime)) {
+                DispatchQueue.global().sync {
+                    Thread.sleep(forTimeInterval: 0.7)
                     waitBankClerk.finishWork()
                 }
             }
