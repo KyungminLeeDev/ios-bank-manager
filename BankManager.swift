@@ -20,49 +20,6 @@ enum BankBusiness: CaseIterable {
     }
 }
 
-private class BankClerk {
-    // MARK: - Properties
-    let bankHeadOffice: BankHeadOffice
-    var bankWindowNumber: Int
-    var isWorking: Bool {
-        currentClient != nil
-    }
-    var currentClient: Client?
-    var finishedClients: Int = 0
-    
-    // MARK: - Methods
-    func startWork(for client: Client) {
-        currentClient = client
-        print("\(client.tag)번 \(client.priority.string)고객 \(client.bankBusiness.string)업무 시작")
-        
-        DispatchQueue.global().asyncAfter(deadline: workTime(bankBusiness: client.bankBusiness)) {
-            self.finishWork()
-        }
-    }
-    
-    func finishWork() {
-        finishedClients += 1
-        if let client = currentClient {
-            print("\(client.tag)번 \(client.priority.string)고객 \(client.bankBusiness.string)업무 완료")
-        }
-        currentClient = nil
-    }
-    
-    func workTime(bankBusiness: BankBusiness) -> DispatchTime {
-        switch bankBusiness {
-        case .loan:
-            return .now() + .milliseconds(1100)
-        case .deposit:
-            return .now() + .milliseconds(700)
-        }
-    }
-    
-    init(_ bankHeadOffice: BankHeadOffice, _ bankWindowNumber: Int) {
-        self.bankHeadOffice = bankHeadOffice
-        self.bankWindowNumber = bankWindowNumber
-    }
-}
-
 struct BankManager {
     // MARK: - Properties
     private let bankHeadOffice: BankHeadOffice
